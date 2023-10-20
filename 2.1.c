@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include<stdio.h> //CÓïÑÔ±ê×¼¿â
 #include<unistd.h>
 # define n 100
 # define m 10
