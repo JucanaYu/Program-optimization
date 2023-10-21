@@ -1,8 +1,11 @@
-#include<stdio.h> //CÓïÑÔ±ê×¼¿â
+#include<stdio.h>   
 #include<unistd.h>
+
 # define n 100
 # define m 10
+
 int x,i,j;
+
 unsigned long rpcc(){
     unsigned long result;
     unsigned hi,lo;
