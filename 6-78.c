@@ -6,12 +6,12 @@ int main(){
     struct timespec start_time, end_time;
     unsigned long long elapsed_time;
     clock_gettime(CLOCK_MONOTONIC, &start_time);
-    
+
     int a=3,b=0,y,z,T,T1;
-    T=2;
-    y=T+T;
-    T1=a-b;
-    z=T1*T1;
+    T=2;    //S1
+    y=T+T;  //S2
+    T1=a-b; //S3
+    z=T1*T1;    //S4
     printf("y=%d z=%d T=%d",y,z,T1);
 
     clock_gettime(CLOCK_MONOTONIC, &end_time);
