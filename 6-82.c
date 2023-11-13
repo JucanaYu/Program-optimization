@@ -12,7 +12,7 @@ int main(){
     if(tmp>3 && tmp<10){
         a=tmp;
     }
-    printf("%d",a);
+    // printf("%d",a);
 
     clock_gettime(CLOCK_MONOTONIC, &end_time);
     elapsed_time = (end_time.tv_sec - start_time.tv_sec) * 1000000000ULL + (end_time.tv_nsec - start_time.tv_nsec);

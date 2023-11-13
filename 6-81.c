@@ -11,7 +11,7 @@ int main(){
     if((a+b)>3 && (a+b)<10){
         a=a+b;
     }
-    printf("%d",a);
+    // printf("%d",a);
 
     clock_gettime(CLOCK_MONOTONIC, &end_time);
     elapsed_time = (end_time.tv_sec - start_time.tv_sec) * 1000000000ULL + (end_time.tv_nsec - start_time.tv_nsec);

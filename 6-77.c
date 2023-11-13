@@ -11,7 +11,7 @@ int main(){
     y=T+T;  //S2
     T=a-b;  //S3
     z=T*T;  //S4
-    printf("y=%d z=%d T=%d",y,z);
+    // printf("y=%d z=%d T=%d",y,z);
 
     clock_gettime(CLOCK_MONOTONIC, &end_time);
     elapsed_time = (end_time.tv_sec - start_time.tv_sec) * 1000000000ULL + (end_time.tv_nsec - start_time.tv_nsec);
