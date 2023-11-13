@@ -11,8 +11,10 @@ int main()
 	const int L = 8;
 	int A[N][M][L],B[N][M][L];
 	int i,j,k;
+
     struct timeval start_time, end_time;
     gettimeofday(&start_time, NULL);
+
 	for(i=0;i<=N;i++)
 	{
 		for(j=0;j<=M;j++)
@@ -40,6 +42,7 @@ int main()
     gettimeofday(&end_time, NULL);
     double elapsed_time = (end_time.tv_sec - start_time.tv_sec) + (end_time.tv_usec - start_time.tv_usec) / 1000000.0;
     printf("Elapsed Time: %.3f seconds\n", elapsed_time);
+
 /*	for(i=0;i<=N;i++)
 		for(j=0;j<=M;j++)
 		{
