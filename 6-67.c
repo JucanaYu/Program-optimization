@@ -11,10 +11,22 @@ int main()
 	const int L = 8;
 	int A[N][M][L],B[N][M][L];
 	int i,j,k;
+<<<<<<< HEAD
 
     struct timeval start_time, end_time;
     gettimeofday(&start_time, NULL);
 
+=======
+<<<<<<< HEAD
+    struct timeval start_time, end_time;
+    gettimeofday(&start_time, NULL);
+=======
+	struct timespec start_time, end_time;
+	unsigned long long elapsed_time;
+	    // 记录开始时间
+	clock_gettime(CLOCK_MONOTONIC, &start_time);
+>>>>>>> 3d1f2029d7b58b20c404c10c43fec414d9c8cc6c
+>>>>>>> 962faa89c0ef194a0937c0968d6dce6a7bb7b0cf
 	for(i=0;i<=N;i++)
 	{
 		for(j=0;j<=M;j++)
@@ -39,10 +51,23 @@ int main()
 		}
 	}
 	 // 记录结束时间
+<<<<<<< HEAD
     gettimeofday(&end_time, NULL);
     double elapsed_time = (end_time.tv_sec - start_time.tv_sec) + (end_time.tv_usec - start_time.tv_usec) / 1000000.0;
     printf("Elapsed Time: %.3f seconds\n", elapsed_time);
 
+=======
+<<<<<<< HEAD
+    gettimeofday(&end_time, NULL);
+    double elapsed_time = (end_time.tv_sec - start_time.tv_sec) + (end_time.tv_usec - start_time.tv_usec) / 1000000.0;
+    printf("Elapsed Time: %.3f seconds\n", elapsed_time);
+=======
+	clock_gettime(CLOCK_MONOTONIC, &end_time);
+	    // 计算经过的时间（以纳秒为单位）
+	elapsed_time = (end_time.tv_sec - start_time.tv_sec) * 1000000000ULL + (end_time.tv_nsec - start_time.tv_nsec);
+	printf("Execution Time: %llu ns\n", elapsed_time);
+>>>>>>> 3d1f2029d7b58b20c404c10c43fec414d9c8cc6c
+>>>>>>> 962faa89c0ef194a0937c0968d6dce6a7bb7b0cf
 /*	for(i=0;i<=N;i++)
 		for(j=0;j<=M;j++)
 		{
