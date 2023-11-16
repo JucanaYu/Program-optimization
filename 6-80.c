@@ -1,16 +1,23 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<time.h>
+#include<sys/time.h>
 
-#define N 10
+#define N 100000
 
 int main(){
-    struct timespec start_time, end_time;
-    unsigned long long elapsed_time;
-    clock_gettime(CLOCK_MONOTONIC, &start_time);
+    struct timeval start_time, end_time;
+    gettimeofday(&start_time, NULL);
 
-    int A[N]={1,2,3,4,5,6,7,8,9,10};
-    int B[N]={1,2,3,4,5,6,7,8,9,10};
+    int A[N];
+    int B[N];
+
+    for(int i=0;i<N;i++){
+        A[i]=rand()%100;
+    }
+    for(int i=0;i<N;i++){
+        B[i]=rand()%100;
+    }
+    
     int Y[N]={0};
     int A1[N]={0};
     int X=1,Z=1,C=1;
@@ -20,7 +27,9 @@ int main(){
         A[i]=B[i]+C;    //S3
     }
 
-    clock_gettime(CLOCK_MONOTONIC, &end_time);
-    elapsed_time = (end_time.tv_sec - start_time.tv_sec) * 1000000000ULL + (end_time.tv_nsec - start_time.tv_nsec);
-    printf("Execution Time: %llu ns\n", elapsed_time);
+    gettimeofday(&end_time, NULL);
+    double elapsed_time = (end_time.tv_sec - start_time.tv_sec) + (end_time.tv_usec - start_time.tv_usec) / 1000000.0;
+    printf("Elapsed Time: %.6f seconds\n", elapsed_time);
+
+    return 0;
 }
